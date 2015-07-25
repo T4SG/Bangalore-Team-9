@@ -44,7 +44,7 @@ h2 {
 
 include "connection.php"; //Connect to Database
 
-$deleterecords = "TRUNCATE TABLE tablename"; //empty the table of its current records
+$deleterecords = "TRUNCATE TABLE STUDENT_ACK"; //empty the table of its current records
 mysql_query($deleterecords);
 
 //Upload File
@@ -59,7 +59,7 @@ if (isset($_POST['submit'])) {
 	$handle = fopen($_FILES['filename']['tmp_name'], "r");
 
 	while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
-		$import="INSERT into tablename(item1,item2,item3,item4,item5) values('$data[0]','$data[1]','$data[2]','$data[3]','$data[4]')";
+		$import="INSERT into STUDENT_ACK values('$data[0]','$data[1]','$data[2]','$data[3]')";
 
 		mysql_query($import) or die(mysql_error());
 	}
@@ -70,10 +70,11 @@ if (isset($_POST['submit'])) {
 
 	//view upload form
 }else {
-
+     print "Upload any CSV file and we will upload it to your database<br />\n";
+	 print "WE TAKE CARE OF YOUR OLD DATA TOO!! :) <br />\n" ;
 	print "Upload new csv by browsing to file and clicking on Upload<br />\n";
 
-	print "WE SAVE YOUR OLD DATA TOO!!<br />\n"; print "<form enctype='multipart/form-data' action='upload.php' method='post'>";
+	print "<form enctype='multipart/form-data' action='upload.php' method='post'>";
 
 	print "File name to import:<br />\n";
 
