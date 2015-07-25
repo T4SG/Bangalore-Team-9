@@ -18,7 +18,7 @@
 					<p>ROLE NAME </p>
 				</header>
 				<footer>
-					<a href="#first" class="button scrolly">GET ENTIRE REPORT</a>
+					<a href="http://ec2-52-69-241-133.ap-northeast-1.compute.amazonaws.com:8080/pratham/Mis" class="button scrolly">GET MIS REPORTS</a>
 				</footer>
 			</section>
 
@@ -52,7 +52,7 @@
 								<section>
 									<span class="feature-icon"><span class="icon fa-clock-o"></span></span>
 									<header>
-										<a href="#second" class="button scrolly">VIEW STUDENT DETAILS</a>
+										<a href="#second" class="button scrolly">STUDENT DETAILS</a>
 									</header>
 								</section>
 							</div>
@@ -133,7 +133,7 @@
 				<header>
 					<div class="container">
 						
-						<p>You can View a particular student details<br />
+						<p>You can View a particular student details or go down to update the fees paid<br />
 						</p>
 					</div>
 				</header>
@@ -146,16 +146,52 @@
 									</header>
 									<form method="post" action="#">
 										<div class="row 50%">
+										<div class="6u 12u">
 											<input type="text" name="param" id="param" value="" placeholder="Enter student name"/>
+											</div>
 										</div>
 										<div class="row 50%">
+										<div class="6u 12u">
 											<input type="submit" class="button" value="Get Details!"/>
+											</div>
 										</div>
 									</form>
 								</section>
 						
 					</div>
 				</div>
+			</section>
+
+			<section id="third" class="main">
+			<header>
+				<div class="container">
+					<h2>Give the Student ID and update the fees money</h2>
+					<p>This is the part of Learn Now and Pay Later Scheme</p>
+					<p>In case you don't know the student id , you can check in view student details , the section above </p>
+				</div>
+			</header>
+				<div class="content dark style3">
+					<div class="container">
+						<section>
+							<header>
+								<h3>Form</h3>
+							</header>
+							<form method="post" action="#">
+								<div class="row 50%">
+									<div class="6u 12u">
+										<input type="text" name="studentid" id="studentid" placeholder="Enter the student ID"/>
+									</div>
+								</div>
+								<div class="row 50%">
+									<div class="6u 12u">
+										<input type="text" id="fees" name="fees" placeholder="Enter the amount paid by the student"/>
+									</div>
+								</div>
+							</form>
+						</section>
+					</div>
+				</div>
+				
 			</section>
 
 		
